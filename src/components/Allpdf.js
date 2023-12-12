@@ -12,12 +12,12 @@ function Allpdf() {
 
   const showPdf = (pdf) => {
     // window.open(`http://localhost:5000/files/${pdf}`, "_blank", "noreferrer");
-    // setPdfFile(`http://localhost:8000/files/${pdf}`);
+    // setPdfFile(`https://pdfgenatorandextractorbackend.onrender.com/files/${pdf}`);
     navigate(`/blogslist/${pdf}`)
   };
   const getPdf = async () => {
     try {
-      const result = await axios.get("http://localhost:8000/api/pdf/get-files");
+      const result = await axios.get("https://pdfgenatorandextractorbackend.onrender.com/api/pdf/get-files");
       console.log(result.data.data);
       return result;
       // setAllImage(result.data.data);

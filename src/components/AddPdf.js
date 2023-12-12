@@ -36,7 +36,7 @@ function AddPdf() {
   }, []);
   const getPdf = async () => {
     try {
-      const result = await axios.get("http://localhost:8000/api/pdf/get-files");
+      const result = await axios.get("https://pdfgenatorandextractorbackend.onrender.com/api/pdf/get-files");
       console.log(result.data.data);
       setAllImage(result.data.data);
     } catch (error) {
@@ -53,7 +53,7 @@ function AddPdf() {
 
     try {
       const result = await axios.post(
-        "http://localhost:8000/api/pdf/upload-files",
+        "https://pdfgenatorandextractorbackend.onrender.com/api/pdf/upload-files",
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
@@ -74,8 +74,8 @@ function AddPdf() {
   };
 
   const showPdf = (pdf) => {
-    // window.open(`http://localhost:8000/files/${pdf}`, "_blank", "noreferrer");
-    setPdfFile(`http://localhost:8000/files/${pdf}`);
+    // window.open(`https://pdfgenatorandextractorbackend.onrender.com/files/${pdf}`, "_blank", "noreferrer");
+    setPdfFile(`https://pdfgenatorandextractorbackend.onrender.com/files/${pdf}`);
   };
   return (
     <div className="App">

@@ -25,7 +25,7 @@ function Auth() {
   const sendRequest = async (type = "login") => {
     try {
       const response = await axios.post(
-        `http://localhost:8000/api/user/${type}`,
+        `https://pdfgenatorandextractorbackend.onrender.com/api/user/${type}`,
         {
           name: inputs.name,
           email: inputs.email,

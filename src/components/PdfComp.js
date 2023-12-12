@@ -51,7 +51,7 @@ function PdfComp(props) {
   const handleCreateNewPdf = async () => {
     console.log("Selected Pages:", selectedPages);
       try {
-        const response = await axios.get(`http://localhost:8000/files/${id.id}`, {
+        const response = await axios.get(`https://pdfgenatorandextractorbackend.onrender.com/files/${id.id}`, {
           responseType: 'arraybuffer', 
         });
   
@@ -76,7 +76,7 @@ function PdfComp(props) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/files/${id.id}`, {
+        const response = await axios.get(`https://pdfgenatorandextractorbackend.onrender.com/files/${id.id}`, {
           responseType: 'arraybuffer', 
         });
   
